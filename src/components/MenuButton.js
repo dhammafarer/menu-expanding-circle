@@ -14,18 +14,22 @@ class MenuButton extends React.Component {
 
   render () {
     return (
-      <div className={'nav-toggle ' + (this.state.isOpen ? 'isOpen' : '')}
-        onClick={this.toggleNav.bind(this)}>
-         <div className='shape'/>
-         <div className="lines open">
-           <div className="line"/>
-           <div className="line"/>
-           <div className="line"/>
-         </div>
-         <div className="lines close">
-           <div className="line" />
-           <div className="line" />
-         </div>
+      <div className={"menu " + (this.state.isOpen ? 'isOpen' : '')}>
+        <div className="menu-box">
+        </div>
+        <div className='nav-toggle'
+          onClick={this.toggleNav.bind(this)}>
+          <div className='shape'/>
+          <div className="lines open">
+            <div className="line"/>
+            <div className="line"/>
+            <div className="line"/>
+          </div>
+          <div className="lines close">
+            <div className="line" />
+            <div className="line" />
+          </div>
+        </div>
       </div>
     );
   }

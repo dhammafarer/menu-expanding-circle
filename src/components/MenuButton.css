@@ -21,7 +21,7 @@
   transition: 0.2s linear 0.5s;
 }
 
-.nav-toggle.isOpen .shape {
+.menu.isOpen .shape {
   background-color: #999;
 }
 
@@ -56,11 +56,11 @@
 }
 
 
-.nav-toggle.isOpen .lines.open .line:nth-child(odd) {
+.menu.isOpen .lines.open .line:nth-child(odd) {
   animation: open-out-1 0.4s 0s 1 normal forwards linear;
 }
 
-.nav-toggle.isOpen .lines.open .line:nth-child(even) {
+.menu.isOpen .lines.open .line:nth-child(even) {
   animation: open-out-2 0.4s 0s 1 normal forwards linear;
 }
 
@@ -74,7 +74,7 @@
   animation: close-out-1 0.3s 0.1s 1 normal forwards linear;
 }
 
-.nav-toggle.isOpen .lines.close .line:nth-child(1) {
+.menu.isOpen .lines.close .line:nth-child(1) {
   animation: close-in-1 0.3s 0.6s 1 normal forwards ease-in;
 }
 
@@ -88,7 +88,7 @@
   animation: close-out-2 0.3s 0s 1 normal forwards linear;
 }
 
-.nav-toggle.isOpen .lines.close .line:nth-child(2) {
+.menu.isOpen .lines.close .line:nth-child(2) {
   animation: close-in-2 0.3s 0.5s 1 normal forwards ease-in;
 }
 
@@ -173,4 +173,28 @@
     transform: scaleX(0) translateX(10px);
     transform-origin: 100% 100%;
   }
+}
+
+.menu {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu-box {
+  height: 200vh;
+  border-radius: 50%;
+  background-color: #ccc;
+  transform-origin: 100% 0;
+  opacity: 0.5;
+  transform: translate(200vh, -200vh);
+  transition: .8s ease-out;
+}
+
+.menu.isOpen .menu-box {
+  transform: translate(100vh, -100vh) scale(2, 2);
+  opacity: 1;
 }
