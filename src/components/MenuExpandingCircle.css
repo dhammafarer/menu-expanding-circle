@@ -1,0 +1,23 @@
+.menu {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu-box {
+  height: 200vh;
+  border-radius: 50%;
+  background-color: #ccc;
+  transform-origin: 100% 0;
+  opacity: 0.5;
+  transform: translate(200vh, -200vh);
+  transition: .8s ease-out;
+}
+
+.menu.isOpen .menu-box {
+  transform: translate(100vh, -100vh) scale(2, 2);
+  opacity: 1;
+}
