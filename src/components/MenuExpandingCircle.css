@@ -28,12 +28,12 @@
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease-out;
-}
-
-.menu.isOpen .menu-items {
   position: absolute;
   top: 30%;
   left: 40%;
+}
+
+.menu.isOpen .menu-items {
   opacity: 1;
   visibility: visible;
   transition: .3s ease-in 0.5s;
@@ -44,4 +44,8 @@ a, a:hover, a:visited {
   text-decoration: none;
   font-family: sans-serif;
   font-weight: 600;
+}
+
+a:hover {
+  color: #eee;
 }
