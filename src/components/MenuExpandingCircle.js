@@ -6,6 +6,7 @@ class MenuExpandingCircle extends React.Component {
   constructor (props) {
     super(props);
     this.state = {isOpen: false};
+    this.toggleNav = this.toggleNav.bind(this)
   }
 
   toggleNav () {
@@ -16,13 +17,13 @@ class MenuExpandingCircle extends React.Component {
   render () {
     return (
       <div className={"menu " + (this.state.isOpen ? 'isOpen' : '')}>
-        <MenuButton toggleNav={this.toggleNav.bind(this)}/>
-        <div className="menu-box" />
+        <MenuButton toggleNav={this.toggleNav}/>
+        <div className="menu-box" onClick={this.toggleNav}/>
         <div className="menu-items">
-          <p>Home</p>
-          <p>About</p>
-          <p>Portfolio</p>
-          <p>Contact</p>
+          <p><a href="#">Home</a></p>
+          <p><a href="#">About</a></p>
+          <p><a href="#">Portfolio</a></p>
+          <p><a href="#">Contact</a></p>
         </div>
       </div>
     );

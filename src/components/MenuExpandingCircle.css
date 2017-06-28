@@ -1,10 +1,10 @@
 .menu {
-  overflow: hidden;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
 }
 
 .menu-box {
@@ -15,17 +15,19 @@
   border-radius: 50%;
   background-color: #ccc;
   opacity: 0.5;
-  transition: .8s ease-out;
+  transition: .8s ease-out 0.3s;
 }
 
 .menu.isOpen .menu-box {
   transform: scale(4, 4);
   opacity: 1;
+  transition: .8s ease-in;
 }
 
 .menu-items {
   visibility: hidden;
   opacity: 0;
+  transition: 0.3s ease-out;
 }
 
 .menu.isOpen .menu-items {
@@ -35,4 +37,11 @@
   opacity: 1;
   visibility: visible;
   transition: .3s ease-in 0.5s;
+}
+
+a, a:hover, a:visited {
+  color: #333;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 600;
 }
