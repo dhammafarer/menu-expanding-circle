@@ -16,9 +16,14 @@ class MenuExpandingCircle extends React.Component {
   render () {
     return (
       <div className={"menu " + (this.state.isOpen ? 'isOpen' : '')}>
-        <div className="menu-box">
-        </div>
         <MenuButton toggleNav={this.toggleNav.bind(this)}/>
+        <div className="menu-box" />
+        <div className="menu-items">
+          <p>Home</p>
+          <p>About</p>
+          <p>Portfolio</p>
+          <p>Contact</p>
+        </div>
       </div>
     );
   }

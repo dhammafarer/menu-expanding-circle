@@ -21,3 +21,17 @@
   transform: translate(100vh, -100vh) scale(2, 2);
   opacity: 1;
 }
+
+.menu-items {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu.isOpen .menu-items {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s ease-in 0.5s;
+}
